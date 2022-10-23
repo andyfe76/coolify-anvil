@@ -1,8 +1,6 @@
 FROM python:3.9.15-alpine3.16
 
-RUN ls /bin
-RUN apk update
-# FROM debian:10.13
+RUN apk update && apk add openjdk-8-jdk libpq-dev
 
 #RUN apt-get update && apt-get install openjdk-8-jdk libpq-dev
 
