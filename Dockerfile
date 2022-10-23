@@ -3,7 +3,7 @@ FROM debian:latest
 
 # RUN apk update && apk add openjdk8 libpq-dev gcc musl-dev
 
-RUN apt-get update && apt-get install -y openjdk-11-jdk libpq-dev python3 python3-venv build-essential python3-dev
+RUN apt-get update && apt-get install -y openjdk-11-jdk libpq-dev python3 python3-venv python3-pip build-essential python3-dev
 
 RUN python3 -m pip install --upgrade pip
 RUN pip3 install wheel anvil-app-server anvil-uplink
