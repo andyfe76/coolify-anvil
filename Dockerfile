@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y openjdk-11-jdk libpq-dev python3 python
 RUN useradd -s /bin/bash -m  anvil
 RUN mkdir -p /app
 COPY AnvilDocker app
-RUN chown chown anvil:anvil -R /app
+RUN ls /app
+RUN chown anvil:anvil -R /app
 USER anvil
 
 RUN python3 -m pip install --upgrade pip
@@ -17,7 +18,7 @@ RUN pip3 install wheel anvil-app-server anvil-uplink
 WORKDIR /app
 RUN mkdir -p data
 VOLUME /app/data
-RUN ls /app
+
 CMD ["anvil-app-server", "--app", "/app/"]
 
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
