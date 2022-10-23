@@ -1,6 +1,6 @@
 FROM python:3.9.15-alpine3.16
 
-RUN apk update && apk add openjdk8 libpq-dev
+RUN apk update && apk add openjdk8 libpq-dev gcc
 
 #RUN apt-get update && apt-get install openjdk-8-jdk libpq-dev
 RUN python3 -m pip install --upgrade pip
