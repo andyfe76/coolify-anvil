@@ -7,6 +7,9 @@ RUN apt-get update && apt-get install -y openjdk-11-jdk libpq-dev python3 python
 
 RUN python3 -m pip install --upgrade pip
 RUN pip3 install wheel anvil-app-server anvil-uplink
+
+RUN ["anvil-app-server", "--config-file", "app.yaml"]
+
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
 
 # ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]
