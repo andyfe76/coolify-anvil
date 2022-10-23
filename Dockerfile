@@ -20,10 +20,13 @@ RUN mkdir -p data
 
 # RUN /home/anvil/.local/bin/anvil-app-server --data-dir /app/data --app /app/
 
-
+#working
+#CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--uplink-key", "1qaz2wsx3edc", "--port", "443", "--origin", "https://172.16.16.4", "--disable-tls", "--app", "/app/"]
 #CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--uplink-key", "1qaz2wsx3edc", "--ip", "0.0.0.0", "--port", "443", "--origin", "https://localhost", "--disable-tls", "--forward-headers-insecure", "--add-hsts-headers", "--app", "/app/"]
 #CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--uplink-key", "1qaz2wsx3edc", "--port", "443", "--origin", "https://172.16.16.4", "--disable-tls", "--app", "/app/"]
-CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--uplink-key", "1qaz2wsx3edc", "--port", "443", "--disable-tls", "--app", "/app/"]
+#CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--uplink-key", "1qaz2wsx3edc", "--port", "443", "--disable-tls", "--app", "/app/"]
+
+CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--uplink-key", "1qaz2wsx3edc", "--port", "443", "--origin", "https://172.16.16.4", "--app", "/app/"]
 
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
 
