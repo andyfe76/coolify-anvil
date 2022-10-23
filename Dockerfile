@@ -15,9 +15,9 @@ USER anvil
 
 RUN python3 -m pip install --upgrade pip
 RUN pip3 install wheel anvil-app-server anvil-uplink
-WORKDIR /app
-RUN mkdir -p data
-VOLUME /app/data
+# WORKDIR /app
+# RUN mkdir -p data
+# VOLUME /app/data
 
 CMD ["anvil-app-server", "--app", "/app/"]
 
