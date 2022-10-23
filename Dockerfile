@@ -20,7 +20,7 @@ RUN mkdir -p data
 
 # RUN /home/anvil/.local/bin/anvil-app-server --data-dir /app/data --app /app/
 
-CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--origin", "http://localhost", "--disable-tls", "--forward-headers-insecure", "--add-hsts-headers", "--app", "/app/"]
+CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--origin", "https://localhost", "--disable-tls", "--forward-headers-insecure", "--add-hsts-headers", "--app", "/app/"]
 
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
 
