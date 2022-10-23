@@ -9,13 +9,14 @@ RUN apt-get update && apt-get install -y openjdk-11-jdk libpq-dev python3 python
 RUN useradd -s /bin/bash -m  anvil
 RUN mkdir -p /app
 COPY AnvilDocker app
-RUN ls /app
 RUN chown anvil:anvil -R /app
 USER anvil
 
+RUN ls /app
+
 RUN python3 -m pip install --upgrade pip
-RUN pip3 install wheel anvil-app-server anvil-uplink
-# WORKDIR /app
+RUN pip3 install anvil-app-server anvil-uplink
+#WORKDIR /app
 # RUN mkdir -p data
 # VOLUME /app/data
 
