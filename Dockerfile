@@ -15,9 +15,7 @@ USER anvil
 RUN python3 -m pip install --upgrade pip
 RUN pip3 install anvil-app-server anvil-uplink
 
-RUN /home/anvil/.local/bin/anvil-app-server --help
-
-CMD ["anvil-app-server", "--app", "/app/"]
+CMD ["/home/anvil/.local/bin/anvil-app-server", "--app", "/app/"]
 
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
 
