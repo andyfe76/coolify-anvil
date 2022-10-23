@@ -20,7 +20,7 @@ RUN mkdir -p data
 
 # RUN /home/anvil/.local/bin/anvil-app-server --data-dir /app/data --app /app/
 
-CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--ip", "0.0.0.0", "--app", "/app/"]
+CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--ip", "0.0.0.0", "--origin", "https://172.16.16.5", "--app", "/app/"]
 
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
 
