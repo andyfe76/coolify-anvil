@@ -2,7 +2,7 @@
 
 FROM debian:10.13
 
-RUN apt update && apt upgrade
+# RUN apt update && apt upgrade
 
 RUN python3 --version
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
