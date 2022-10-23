@@ -21,7 +21,7 @@ RUN mkdir -p data
 # RUN /home/anvil/.local/bin/anvil-app-server --data-dir /app/data --app /app/
 
 #CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--uplink-key", "1qaz2wsx3edc", "--ip", "0.0.0.0", "--port", "443", "--origin", "https://localhost", "--disable-tls", "--forward-headers-insecure", "--add-hsts-headers", "--app", "/app/"]
-CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--uplink-key", "1qaz2wsx3edc", "--ip", "0.0.0.0", "--port", "443", "--origin", "https://localhost", "--disable-tls", "--app", "/app/"]
+CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--uplink-key", "1qaz2wsx3edc", "--ip", "0.0.0.0", "--port", "443", "--origin", "http://localhost", "--disable-tls", "--app", "/app/"]
 
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
 
