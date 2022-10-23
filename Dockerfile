@@ -1,8 +1,8 @@
 FROM python:3.9.15-slim-buster
 
 # FROM debian:10.13
-
-RUN apt-get update && apt-get install openjdk-8-jdk libpq-dev
+RUN ls /bin
+#RUN apt-get update && apt-get install openjdk-8-jdk libpq-dev
 
 RUN python3 --version
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
