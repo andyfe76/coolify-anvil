@@ -1,7 +1,8 @@
 FROM python:3.9.15-slim-buster
 
+RUN apk update
 # FROM debian:10.13
-RUN ls /bin
+# RUN ls /bin
 #RUN apt-get update && apt-get install openjdk-8-jdk libpq-dev
 
 RUN python3 --version
