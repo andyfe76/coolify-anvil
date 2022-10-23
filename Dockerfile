@@ -5,10 +5,20 @@ FROM debian:latest
 
 RUN apt-get update && apt-get install -y openjdk-11-jdk libpq-dev python3 python3-venv python3-pip build-essential python3-dev
 
+
+RUN useradd -s /bin/bash -m  anvil
+RUN mkdir -p /app
+COPY AnvilDocker app
+RUN chown chown anvil:anvil -R /app
+USER anvil
+
 RUN python3 -m pip install --upgrade pip
 RUN pip3 install wheel anvil-app-server anvil-uplink
-
-RUN ["anvil-app-server", "--app", "AnvilDocker"]
+WORKDIR /app
+RUN mkdir -p data
+VOLUME /app/data
+RUN ls /app
+CMD ["anvil-app-server", "--app", "/app/"]
 
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
 
