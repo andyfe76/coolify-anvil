@@ -3,7 +3,7 @@ FROM debian:latest
 
 # RUN apk update && apk add openjdk8 libpq-dev gcc musl-dev
 
-RUN apt-get update && apt-get install -y openjdk-11-jdk libpq-dev python3 python3-venv python3-pip build-essential python3-dev
+RUN apt-get update && apt-get install -y openjdk-11-jdk libpq-dev python3 python3-venv python3-pip build-essential python3-dev procps
 
 
 RUN useradd -s /bin/bash -m  anvil
@@ -20,7 +20,7 @@ RUN mkdir -p data
 
 # RUN /home/anvil/.local/bin/anvil-app-server --data-dir /app/data --app /app/
 
-CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--origin", "https://test1.lansapp.net", "--app", "/app/"]
+CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--origin", "https://localhost", "--app", "/app/"]
 
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
 
