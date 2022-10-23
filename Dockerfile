@@ -1,6 +1,6 @@
-#FROM python:3.9.15-slim-buster
+FROM python:3.9.15-slim-buster
 
-FROM debian:10.13
+# FROM debian:10.13
 
 # RUN apt update && apt upgrade
 
