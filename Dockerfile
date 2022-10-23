@@ -12,13 +12,10 @@ COPY AnvilDocker app
 RUN chown anvil:anvil -R /app
 USER anvil
 
-RUN ls /app
-
 RUN python3 -m pip install --upgrade pip
 RUN pip3 install anvil-app-server anvil-uplink
-#WORKDIR /app
-# RUN mkdir -p data
-# VOLUME /app/data
+
+RUN /home/anvil/.local/bin/anvil-app-server --help
 
 CMD ["anvil-app-server", "--app", "/app/"]
 
