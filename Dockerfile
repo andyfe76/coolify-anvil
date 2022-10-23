@@ -18,7 +18,7 @@ RUN pip3 install anvil-app-server anvil-uplink
 WORKDIR /app
 RUN mkdir -p data
 
-CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--port", "3007", "--app", "/app/"]
+CMD ["/home/anvil/.local/bin/anvil-app-server", "--data-dir", "/app/data", "--app", "/app/"]
 
 # COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
 
